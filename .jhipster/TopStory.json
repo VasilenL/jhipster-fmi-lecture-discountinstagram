@@ -1,0 +1,28 @@
+{
+    "name": "TopStory",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "profile",
+            "otherEntityRelationshipName": "topStories",
+            "relationshipName": "profile",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200303183000",
+    "entityTableName": "top_story",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

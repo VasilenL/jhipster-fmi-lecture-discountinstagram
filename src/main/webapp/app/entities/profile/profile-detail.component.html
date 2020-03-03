@@ -1,0 +1,54 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="profile">
+            <h2><span jhiTranslate="discountInstagramApp.profile.detail.title">Profile</span> {{ profile.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="discountInstagramApp.profile.profileName">Profile Name</span></dt>
+                <dd>
+                    <span>{{ profile.profileName }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.profile.name">Name</span></dt>
+                <dd>
+                    <span>{{ profile.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.profile.totalPosts">Total Posts</span></dt>
+                <dd>
+                    <span>{{ profile.totalPosts }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.profile.totalFollowers">Total Followers</span></dt>
+                <dd>
+                    <span>{{ profile.totalFollowers }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.profile.follows">Follows</span></dt>
+                <dd>
+                    <span>{{ profile.follows }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.profile.profileDescription">Profile Description</span></dt>
+                <dd>
+                    <span>{{ profile.profileDescription }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.profile.profilePicture">Profile Picture</span></dt>
+                <dd>
+                    <span>{{ profile.profilePicture }}</span>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/profile', profile.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

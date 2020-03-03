@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="pictures">
+            <h2><span jhiTranslate="discountInstagramApp.pictures.detail.title">Pictures</span> {{ pictures.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="discountInstagramApp.pictures.name">Name</span></dt>
+                <dd>
+                    <span>{{ pictures.name }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.pictures.fullTitle">Full Title</span></dt>
+                <dd>
+                    <span>{{ pictures.fullTitle }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.pictures.description">Description</span></dt>
+                <dd>
+                    <span>{{ pictures.description }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.pictures.profile">Profile</span></dt>
+                <dd>
+                    <div *ngIf="pictures.profile">
+                        <a [routerLink]="['/profile', pictures.profile?.id, 'view']">{{ pictures.profile?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/pictures', pictures.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

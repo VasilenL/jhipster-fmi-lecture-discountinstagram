@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="topStory">
+            <h2><span jhiTranslate="discountInstagramApp.topStory.detail.title">Top Story</span> {{ topStory.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="discountInstagramApp.topStory.title">Title</span></dt>
+                <dd>
+                    <span>{{ topStory.title }}</span>
+                </dd>
+                <dt><span jhiTranslate="discountInstagramApp.topStory.profile">Profile</span></dt>
+                <dd>
+                    <div *ngIf="topStory.profile">
+                        <a [routerLink]="['/profile', topStory.profile?.id, 'view']">{{ topStory.profile?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/top-story', topStory.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

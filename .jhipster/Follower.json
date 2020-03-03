@@ -1,0 +1,28 @@
+{
+    "name": "Follower",
+    "fields": [
+        {
+            "fieldName": "profileName",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "profile",
+            "otherEntityRelationshipName": "followers",
+            "relationshipName": "profile",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200303183100",
+    "entityTableName": "follower",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

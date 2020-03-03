@@ -1,0 +1,23 @@
+{
+  "discountInstagramApp": {
+    "topStory": {
+      "home": {
+        "title": "Top Stories",
+        "createLabel": "Create a new Top Story",
+        "createOrEditLabel": "Create or edit a Top Story",
+        "notFound": "No Top Stories found"
+      },
+      "created": "A new Top Story is created with identifier {{ param }}",
+      "updated": "A Top Story is updated with identifier {{ param }}",
+      "deleted": "A Top Story is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Top Story {{ id }}?"
+      },
+      "detail": {
+        "title": "Top Story"
+      },
+      "title": "Title",
+      "profile": "Profile"
+    }
+  }
+}
