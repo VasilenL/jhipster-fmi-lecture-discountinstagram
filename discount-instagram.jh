@@ -1,0 +1,39 @@
+
+entity Profile {
+	profileName String,
+	name String,
+    totalPosts Integer,
+    totalFollowers Integer,
+    follows Integer,
+    profileDescription String,
+    profilePicture String
+}
+
+entity TopStory {
+	title String
+}
+
+entity Follower {
+	profileName String
+}
+
+entity Pictures {
+	name String,
+	fullTitle String,
+    description String
+}
+
+relationship OneToMany {
+	Profile{topStories} to TopStory,
+	Profile{followers} to Follower,
+	Profile{pictures} to Pictures
+}
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
