@@ -1,0 +1,63 @@
+{
+    "name": "Profile",
+    "fields": [
+        {
+            "fieldName": "profileName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totalPosts",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "totalFollowers",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "follows",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "profileDescription",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "profilePicture",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "topStory",
+            "otherEntityRelationshipName": "profile",
+            "relationshipName": "topStories"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "follower",
+            "otherEntityRelationshipName": "profile",
+            "relationshipName": "followers"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "pictures",
+            "otherEntityRelationshipName": "profile",
+            "relationshipName": "pictures"
+        }
+    ],
+    "changelogDate": "20200303182900",
+    "entityTableName": "profile",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
